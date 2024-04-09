@@ -1,4 +1,4 @@
-## Python assignment 1
+## MATH 341: Python Assignment 1
 
 For problems 1, 2, and 3, use the function `generate_random_set(min_val, max_val, set_length)` to generate input sets.  Verify that the function parameters mean what you think they mean. 
 
