@@ -2,10 +2,11 @@
 
 This assignment will involve using the pandas module for data exploration and manipulation in python.
 
-First, make sure that pandas is installed in your environment. 
+First, make sure that pandas is installed in your environment.
 
 ### Problem 1: 
-Load the `` csv file located here by passing the url as your function argument. 
+Load the `2023_nhl_stats.csv` csv file located in the `data` directory 
+of the [class GitHub repo](https://github.com/dougfaust/WWU_Math341) by passing the url as your function argument. 
 
 For some of these problems, we don't care about the position Left Wing (`LW`) or Right Wing (`RW`) separately, 
 so make a new column in the DataFrame called `Position_type` so that both of those position categories are 
