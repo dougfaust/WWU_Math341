@@ -61,8 +61,8 @@ if __name__ == "__main__":
     # compare to the format of the dataframe:
     print(mnist_df.head())
 
-    df = problem_one(df)
-    print(f"my new columns should be in this list: {df.columns}")
+    mnist_df = problem_one(mnist_df)
+    print(f"my new columns should be in this list: {mnist_df.columns}")
 
     # what does this do?
     # mnist_df[['pixel_5_5', 'label']].boxplot(by='label')
