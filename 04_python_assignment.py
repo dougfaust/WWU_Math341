@@ -52,7 +52,7 @@ def problem_five():
 def problem_six():
     pass
 
-if name == "__main__":
+if __name__ == "__main__":
 
     digits, mnist_df = download_clean_mnist()
 
