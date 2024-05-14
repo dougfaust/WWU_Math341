@@ -50,7 +50,8 @@ one does not wish to build from the ground up:
 2) Find a Python library* that does what you want.  
 *Very obscure libraries should be installed in a virtual environment as a best security and stability practice.
 
-Write a function that displays (or saves to image file) a stem-and-leaf plot using either method listed above.  
+Write a function that displays (or saves to image file) a stem-and-leaf plot using either method listed above.  If your method
+displays a nicely-formatted ASCII plot, that's fine too.
 Test your function on 50 random samples from a column of the iris dataset, converted from `cm` to `mm` and cast to integers.
 
 ### Problem 6:
