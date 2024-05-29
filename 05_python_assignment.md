@@ -18,26 +18,38 @@ Run the `create_nhl_data`, and  `create_mnist_dataframe` method provided to down
 datasets you will use for this assignment.  
 
 ### Problem 1: 
-The method called `problem_one` recreates the CLT visualizer we used in class using a pretty boring distribution.  
-Change the distribution to something interesting and highly skewed (e.g. Weibull with a parameter value >2).  
-Add the ability for the method to take two arguments `n`, the number of samples used to 
-calculate the mean, and `repetitions` the number of times a mean (over `n` samples) is calculated for the histogram.
+The method `clt_visualizer` is a Python version of <https://onlinestatbook.com/stat_sim/sampling_dist/>.
+
+Create methods called `problem_one_continuous` and `problem_one_discrete` that use this template function 
+to demonstrate the Central Limit theorem for two other distributions available which are available in scipy.  Feel free to leave
+various variables like axis limits and titles hard-coded or make them dynamic.
+
+* As the names suggest, one must be a discrete distribution and one a continuous distribution. 
+* Both distributions should be ones we haven't discussed in class.
+* Look up the theoretical means of your distributions and compare them to what you see on your histograms.
+* A discrete distribution should be plotted with a bar chart, not a (line)plot.  
+
+
+### Note for problems 2 and 3:
+Many `scipy.stats` distributions have a method called `interval` to compute confidence intervals instead 
+of finding $\overline{x}$ and $z_{\alpha/2}$ by hand.  
+See <https://www.geeksforgeeks.org/how-to-calculate-confidence-intervals-in-python/> for example.
 
 ### Problem 2:
-Calculate the mean and 90% CI for the `CENTER_SUM` for a particular label.  Comment on whether your results 
-for the digits zero, six, and eight make sense given the boxplots that are displayed when 
-you run the `create_mnist_dataframe` code.
+Calculate the mean and 90% CI for the `CENTER_SUM` for a particular label taken as the argument to the method.  
+Comment on whether your results for the digits zero, six, and eight make sense given the boxplots 
+that are displayed when you run the `create_mnist_dataframe` code.
 
 Can you use the normal distribution or should you use Student's t-distribution here?
 
 
 ### Problem 3:
-Calculate the mean and 90% CI for the number of assists per game of an NHL defenseman on some particular 
-team.  
+Calculate the mean and $\alpha$ confidence interval for the number of assists per game of an NHL defenseman on some particular 
+team.  The dataframe, team abbreviation and CI level ($\alpha$) should all be inputs to the method. 
 
 Can you use the normal distribution or should you use Student's t-distribution here?
 
-Is there something funny about your results?  Look at Chicago or Washington.
+Is there something funny about your results?  Look at Chicago or Washington.  Comment, please.
 
 ### Problem 4: 
 In the 2022-23 season, defensemen for the Colorado Avalanche scored 60 goals, while the Washington Capitals'
