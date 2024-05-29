@@ -12,7 +12,7 @@ Template code for plotting histograms and generating random samples with the ran
 
 ### Lab 2
 **Synopsis:**
-Use of imports, classes, and objects in python.  Experiments in combinatorics using a virtual card deck
+Use of imports, classes, and objects in python.  Experiments in probabilities and combinatorics using a virtual card deck
 and creating a new poker variant with a custom deck.
 
 **Files:**
@@ -31,8 +31,8 @@ Introduction to the pandas library for manipulating and describing data tables. 
 
 ### Lab 4
 **Synopsis:**
-Load scikit learn datasets and maniuplate them as pandas DataFrames.  Summary Visualizations; boxplots, 
-stem-and-leaf plots, student's choice modern vis from a library like seaborn or bokeh.
+Load scikit learn datasets and maniuplate them as pandas DataFrames.  Summary visualizations; boxplots, 
+stem-and-leaf plots, student's choice modern viz from a library like seaborn or bokeh.
 
 **Files:**
 * `04_python_assignment.py` template code
