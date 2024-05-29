@@ -12,7 +12,6 @@ from scipy import stats
 def download_clean_mnist():
     # sklearn bunch object, similar to a dictionary
     digits = load_digits(as_frame=True)
-    print(digits.data.shape)
 
     # a pandas dataframe with informative features and target merged as a column
     df = pd.DataFrame(data=digits.data, columns=digits.feature_names)
@@ -89,21 +88,21 @@ if __name__ == "__main__":
 
     NHL_df = pd.read_csv('https://raw.githubusercontent.com/dougfaust/WWU_Math341/main/data/2023_nhl_stats.csv')
 
-    problem_two(label=9)
+    problem_two(mnist_df, label=9)
 
     problem_three(NHL_df, 'TOR', 0.95)
 
     # Sample vs. population ttest syntax.  But how would I find the actual population mean?
-    stats.ttest_1samp(
-        NHL_df[(NHL_df.Team == 'BOS') & (NHL_df.Pos == 'D')]['G'].values,
+    print(stats.ttest_1samp(
+        NHL_df[(NHL_df.Team == 'BOS') & (NHL_df.Pos == 'D')]['G'],
         popmean=3.5
-    )
+    ))
     problem_four(NHL_df, 'WAS')
 
     # relative population ttest syntax.
     MAX_SAMPLES = 170
-    stats.ttest_rel(
-                mnist_df[mnist_df.label=1].CENTER_SUM[:MAX_SAMPLES],
-                mnist_df[mnist_df.label=9].CENTER_SUM[:MAX_SAMPLES]
-    )
+    print(stats.ttest_rel(
+                mnist_df[mnist_df.label==1].CENTER_SUM[:MAX_SAMPLES],
+                mnist_df[mnist_df.label==9].CENTER_SUM[:MAX_SAMPLES]
+    ))
     problem_five(mnist_df)
