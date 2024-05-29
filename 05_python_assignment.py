@@ -92,17 +92,21 @@ if __name__ == "__main__":
 
     problem_three(NHL_df, 'TOR', 0.95)
 
-    # Sample vs. population ttest syntax.  But how would I find the actual population mean?
+    #### Sample vs. population ttest syntax.  How would I find the actual population mean?
+    #### use this to solve problem four
     print(stats.ttest_1samp(
         NHL_df[(NHL_df.Team == 'BOS') & (NHL_df.Pos == 'D')]['G'],
         popmean=3.5
     ))
+
     problem_four(NHL_df, 'WAS')
 
-    # relative population ttest syntax.
+    #### this code demonstrates the relative population ttest syntax.
+    #### use this to solve problem five
     MAX_SAMPLES = 170
     print(stats.ttest_rel(
                 mnist_df[mnist_df.label==1].CENTER_SUM[:MAX_SAMPLES],
                 mnist_df[mnist_df.label==9].CENTER_SUM[:MAX_SAMPLES]
     ))
+
     problem_five(mnist_df)
