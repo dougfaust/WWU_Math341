@@ -39,6 +39,7 @@ stem-and-leaf plots, student's choice modern viz from a library like seaborn or 
 * `04_python_assignment.md` assignment 
 
 ### Lab 5
+![lab 5 thumbnail](https://github.com/dougfaust/WWU_Math341/img/blob/main/lab5.png?raw=true)
 **Synopsis:**
 Introduction to the scipy stats library.  Explore and modify a Central Limit Theorem visualizer, 
 compute confidence intervals and do hypothesis testing for datasets from previous labs 
