@@ -67,7 +67,6 @@ def problem_four(df, team):
     return
 
 def problem_five(df):
-    MAX_SAMPLES = 170  # keep this, it fixes the two sample pairs to be the same length
 
     for k in range(10):
         for j in range(k + 1, 10):
