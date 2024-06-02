@@ -103,10 +103,10 @@ if __name__ == "__main__":
 
     #### this code demonstrates the relative population ttest syntax.
     #### use this to solve problem five
-    MAX_SAMPLES = 170
-    print(stats.ttest_rel(
-                mnist_df[mnist_df.label==1].CENTER_SUM[:MAX_SAMPLES],
-                mnist_df[mnist_df.label==9].CENTER_SUM[:MAX_SAMPLES]
+    print(stats.ttest_ind(
+                mnist_df[mnist_df.label==1].CENTER_SUM,
+                mnist_df[mnist_df.label==9].CENTER_SUM,
+                equal_var=False
     ))
 
     problem_five(mnist_df)
