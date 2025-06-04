@@ -23,15 +23,20 @@ def download_clean_mnist():
     return df
 
 def clt_samples(dist, n=5, samples=1000):
+    """this finds the mean of n random values from your dist, samples times"""
     s = []
     for _ in range(samples):
         s.append(dist.rvs(size=n).mean())
     return s
 
 def clt_visualizer():
+    
+    # get an example model from the scipy stats package: the Weibull distribution takes a parmater c
     c = 2
     rv = stats.weibull_min(c)
 
+    # choose the sample space (you might need to fiddle with this to see all your data)
+    # for a discrete distribution, x will need to be an array of integers
     x = np.linspace(0.01, 2.99, 300)
 
     fig, (ax1, ax2) = plt.subplots(2, sharex=True)
@@ -48,9 +53,12 @@ def clt_visualizer():
     plt.show()
 
 def problem_one_continuous():
+    """copy and modify the clt_visualizer method code for a different continuous distribution"""
     return
 
 def problem_one_discrete():
+    """copy and modify the clt_visualizer method code for a discrete distribution 
+    remember x must be an array of integers"""
     return
 
 def problem_two(df, label):
@@ -100,8 +108,10 @@ if __name__ == "__main__":
 
     problem_four(NHL_df, 'WAS')
 
-    #### this code demonstrates the relative population ttest syntax.
-    #### use this to solve problem five
+    """
+    this code demonstrates the relative population ttest syntax.
+    use this to solve problem five by inserting it into the nested loops
+    """
     print(stats.ttest_ind(
                 mnist_df[mnist_df.label==1].CENTER_SUM,
                 mnist_df[mnist_df.label==9].CENTER_SUM,
